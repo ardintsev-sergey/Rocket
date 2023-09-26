@@ -1,0 +1,97 @@
+.header {
+  width: 100%;
+}
+
+.header__top {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__burger-btn {
+  @include zero-btn;
+  margin-right: 43px;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+
+  @media (min-width: 1200px) {
+    margin-right: 25px;
+  }
+}
+
+.header__place {
+  display: none;
+  margin-right: auto;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.header__place-city {
+  @include zero-margin;
+}
+
+.header__place-street {
+  @include zero-margin;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts-place {
+  @include zero-margin;
+  text-align: end;
+  font-size: 13px;
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.header__contacts-tel {
+  font-size: 16px;
+  font-weight: 700;
+  color: $basic_black;
+  text-decoration: none;
+
+  @media (min-width: 1200px) {
+    margin-right: 35px;
+  }
+}
+
+.header__contacts-btn {
+  @include zero-btn;
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    padding: 11px 29px;
+    background-color: $basic_btn-green;
+    border-radius: 50px;
+    line-height: 21px;
+    color: #fff;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    padding: 11px 29px;
+    background-color: $basic_btn-green;
+    border-radius: 50px;
+    line-height: 21px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,26 @@
+.clinic {
+  margin-bottom: 50px;
+}
+
+.clinic__img {
+  @include zero-margin;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  max-height: 350px;
+}
+
+.clinic__content {
+  padding-top: 35px;
+  padding-bottom: 53px;
+  background-color: $basic_grey;
+}
+
+.clinic__title {
+  margin-bottom: 10px;
+}
+
+.clinic__descr {
+  @include zero-margin;
+  line-height: 150%;
+}
