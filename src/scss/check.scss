@@ -5,6 +5,18 @@
 .check__content {
   padding: 22px 30px 42px 23px;
   background-color: $basic_light-blue;
+
+  @media (min-width: 1200px) {
+    padding: 53px 0px 56px 63px;
+    flex-grow: 1;
+  }
+}
+
+.check__wrapper {
+  @media (min-width: 1200px) {
+    display: flex;
+    background-color: $basic_light-blue;
+  }
 }
 
 .check__img {
@@ -12,6 +24,12 @@
   display: block;
   width: 100%;
   object-fit: cover;
+
+  @media (min-width: 1200px) {
+    order: 2;
+    width: 60.7%;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 34% 100%);
+  }
 }
 
 .check__title {

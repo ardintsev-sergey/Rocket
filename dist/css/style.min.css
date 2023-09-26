@@ -103,6 +103,13 @@ body {
 .header__place-city {
   margin: 0;
   padding: 0;
+  position: relative;
+}
+.header__place-city::before {
+  position: absolute;
+  content: url("../img/img/placeholder.svg");
+  left: -20px;
+  top: -3px;
 }
 
 .header__place-street {
@@ -112,7 +119,13 @@ body {
 
 .header__contacts {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .header__contacts {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .header__contacts-place {
@@ -132,6 +145,13 @@ body {
   font-weight: 700;
   color: #364844;
   text-decoration: none;
+  position: relative;
+}
+.header__contacts-tel::before {
+  position: absolute;
+  content: url("../img/img/whatsapp-header.svg");
+  left: -30px;
+  top: -5px;
 }
 @media (min-width: 1200px) {
   .header__contacts-tel {
@@ -158,22 +178,45 @@ body {
   }
 }
 
-.header__nav {
+.header__bottom.container {
   display: none;
+  max-width: 100%;
+  padding: 10px 0 10px 0;
+  background-color: #0dbc91;
+  line-height: 21px;
+  color: #fff;
 }
 @media (min-width: 1200px) {
-  .header__nav {
+  .header__bottom.container {
     display: block;
-    padding: 11px 29px;
-    background-color: #0dbc91;
-    border-radius: 50px;
-    line-height: 21px;
-    color: #fff;
   }
+}
+
+.header__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.header__nav-item {
+  font-size: 16px;
+}
+.header__nav-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clinic {
   margin-bottom: 50px;
+}
+
+.clinic__wrapper {
+  background-color: #f8fbfa;
+}
+@media (min-width: 1200px) {
+  .clinic__wrapper {
+    display: flex;
+  }
 }
 
 .clinic__img {
@@ -184,11 +227,31 @@ body {
   object-fit: cover;
   max-height: 350px;
 }
+@media (min-width: 1200px) {
+  .clinic__img {
+    order: 2;
+    width: 49.5%;
+    max-height: 533px;
+  }
+}
 
 .clinic__content {
+  align-self: flex-end;
+  justify-self: end;
   padding-top: 35px;
   padding-bottom: 53px;
+  padding-left: 17px;
+  padding-right: 18px;
   background-color: #f8fbfa;
+}
+@media (min-width: 1200px) {
+  .clinic__content {
+    padding-top: 144px;
+    padding-bottom: 162px;
+    width: 370px;
+    margin-left: auto;
+    margin-right: 210px;
+  }
 }
 
 .clinic__title {
@@ -209,6 +272,19 @@ body {
   padding: 22px 30px 42px 23px;
   background-color: #e2f0ef;
 }
+@media (min-width: 1200px) {
+  .check__content {
+    padding: 53px 0px 56px 63px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .check__wrapper {
+    display: flex;
+    background-color: #e2f0ef;
+  }
+}
 
 .check__img {
   margin: 0;
@@ -216,6 +292,13 @@ body {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .check__img {
+    order: 2;
+    width: 60.7%;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 34% 100%);
+  }
 }
 
 .check__title {
@@ -288,13 +371,32 @@ body {
 }
 
 .footer {
+  background-color: #08664f;
+}
+
+.footer__wrapper {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 31px;
+  align-items: center;
   padding-top: 42px;
   padding-bottom: 41px;
-  background-color: #08664f;
+}
+@media (min-width: 1200px) {
+  .footer__wrapper {
+    grid-template-columns: 1fr max-content 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__nav-list {
+    display: flex;
+  }
+}
+
+.footer__nav-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .footer__socials-list {
@@ -304,6 +406,11 @@ body {
   justify-self: end;
   display: flex;
   align-items: center;
+}
+@media (min-width: 1200px) {
+  .footer__socials-list {
+    order: 3;
+  }
 }
 
 .footer__socials-item:not(:last-child) {

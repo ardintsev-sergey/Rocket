@@ -38,6 +38,14 @@
 
 .header__place-city {
   @include zero-margin;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url("../img/img/placeholder.svg");
+    left: -20px;
+    top: -3px;
+  }
 }
 
 .header__place-street {
@@ -46,7 +54,12 @@
 
 .header__contacts {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .header__contacts-place {
@@ -63,6 +76,14 @@
   font-weight: 700;
   color: $basic_black;
   text-decoration: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url("../img/img/whatsapp-header.svg");
+    left: -30px;
+    top: -5px;
+  }
 
   @media (min-width: 1200px) {
     margin-right: 35px;
@@ -83,15 +104,28 @@
   }
 }
 
-.header__nav {
+.header__bottom.container {
   display: none;
+  max-width: 100%;
+  padding: 10px 0 10px 0;
+  background-color: $basic_btn-green;
+  line-height: 21px;
+  color: $white;
 
   @media (min-width: 1200px) {
     display: block;
-    padding: 11px 29px;
-    background-color: $basic_btn-green;
-    border-radius: 50px;
-    line-height: 21px;
-    color: #fff;
+  }
+}
+
+.header__nav-list {
+  @include zero-list;
+  display: flex;
+}
+
+.header__nav-item {
+  font-size: 16px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
   }
 }
