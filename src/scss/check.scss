@@ -16,6 +16,8 @@
   @media (min-width: 1200px) {
     display: flex;
     background-color: $basic_light-blue;
+    margin-bottom: 34px;
+    min-width: 0;
   }
 }
 
@@ -72,8 +74,9 @@
   }
 }
 
-.check__btns {
+.check__content-btns {
   display: flex;
+  align-items: center;
 }
 
 .check__registry-btn {
@@ -84,6 +87,16 @@
   border-radius: 50px;
   line-height: 21px;
   color: #fff;
+  transition: background-color ease-in-out 0.3s;
+
+  &:active {
+    background-color: $active_green;
+  }
+  @media (min-width: 1200px) {
+    &:hover {
+      background-color: $active_green;
+    }
+  }
 }
 
 .check__more-btn {
@@ -93,4 +106,124 @@
   border: $basic_btn-green 1px solid;
   line-height: 21px;
   color: $basic_btn-green;
+  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+
+  &:active {
+    background-color: $basic_btn-green;
+    color: $white;
+  }
+  @media (min-width: 1200px) {
+    &:hover {
+      background-color: $basic_btn-green;
+      color: $white;
+    }
+  }
+}
+
+.check__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check__btn {
+  @include zero-btn;
+  width: 34px;
+  height: 17px;
+  transition: fill ease-in-out 0.3s;
+
+  @media (min-width: 1200px) {
+    svg path {
+      transition: fill ease-in-out 0.3s;
+    }
+
+    &:hover svg path {
+      fill: $basic_btn-green;
+    }
+  }
+}
+
+.check__btn--prev {
+  margin-right: 36px;
+}
+
+.check__btn--next {
+  transform: rotate(180deg);
+  margin-left: 36px;
+}
+
+.check__pages {
+  font-size: 18px;
+  color: #c0c0c0;
+  width: auto;
+  position: static;
+
+  & > span:first-child {
+    color: $basic_black;
+  }
+}
+
+.check__analisys-diag-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check__analisys,
+.check__diagnostics {
+  background-image: url(../img/pictures/checkup2-desktop.jpg);
+  width: 49%;
+  min-height: 294px;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 34px;
+  padding-left: 40px;
+  border-radius: 5px;
+}
+
+.check__diagnostics {
+  background-image: url(../img/pictures/checkup3-desktop.jpg);
+  // width: 49%;
+  // min-height: 294px;
+  // border-radius: 5px;
+}
+
+.check__analisys-link,
+.check__diagnostics-link {
+  position: relative;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: $white;
+  text-decoration: none;
+  transition: color ease-in-out 0.3s;
+  svg path {
+    transition: fill ease-in-out 0.3s;
+  }
+
+  @media (min-width: 1200px) {
+    &:hover {
+      color: $basic_btn-green;
+      text-decoration: underline;
+      & svg path {
+        fill: $basic_btn-green;
+      }
+    }
+  }
+}
+
+// .check__analisys-link::after,
+// .check__diagnostics-link::after {
+//   position: absolute;
+//   content: url(../img/img/arrow-check.svg);
+
+// }
+
+.check__analisys-descr,
+.check__diagnostics-descr {
+  @include zero-margin;
+  width: 400px;
+  color: $white;
+  font-size: 16px;
+  line-height: 24px;
 }

@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/app.min.js" defer></script>
     <title>Test</title>
@@ -11,11 +16,7 @@
     <header class="header">
       <div class="header__top container">
         <button class="header__burger-btn">
-          <svg width="37" height="26" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="37" height="4" fill="#1FA181"/>
-            <rect y="11" width="37" height="4" fill="#1FA181"/>
-            <rect y="22" width="37" height="4" fill="#1FA181"/>
-          </svg>
+          <span></span>
         </button>
         <a class="header__logo" href="#">
           <svg width="62" height="19" viewBox="0 0 62 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,16 +36,37 @@
           <button class="header__contacts-btn">Записаться на прием</button>
         </div>
       </div>
-      <div class="header__bottom container">
+      <div class="header__bottom ">
         <nav class="header__nav container">
           <ul class="header__nav-list">
-            <li class="header__nav-item">О клинике</li>
-            <li class="header__nav-item">Услуги</li>
-            <li class="header__nav-item">Специалисты</li>
-            <li class="header__nav-item">Цены</li>
-            <li class="header__nav-item">Контакты</li>
+            <li class="header__nav-item">
+              <a href="#">
+                О клинике
+            </a>
+          </li>
+            <li class="header__nav-item">
+              <a href="#">
+                Услуги
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">
+                Специалисты
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">
+                Цены
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">
+                Контакты
+              </a>
+            </li>
           </ul>
         </nav>
+        <button class="header__nav-btn">Записаться на прием</button>
       </div>
     </header>
 
@@ -52,8 +74,7 @@
       <section class="clinic">
         <div class="clinic__wrapper ">
           <img class="clinic__img" src="./img/pictures/clinic.jpg" alt="">
-          <div class="clinic__content
-          ">
+          <div class="clinic__content">
             <h1 class="main__title clinic__title title">Многопрофильная клиника для детей и взрослых</h1>
             <p class="clinic__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
           </div>
@@ -61,28 +82,59 @@
       </section>
 
       <section class="check container">
-        <div class="check__wrapper">
-          <img class="check__img" src="./img/pictures/checkup.jpg" alt="">
-          <div class="check__content">
-            <h2 class="check__title title">Check-UP</h2>
-            <p class="check__for">для мужчин</p>
-            <ul class="check__list">
-              <li class="check__item">Гормональный скрининг</li>
-              <li class="check__item">Тестостерон</li>
-              <li class="check__item">Свободный тестостерон</li>
-              <li class="check__item">Глобулин, связывающий половые гормоны</li>
-            </ul>
-            <p class="check__price">Всего 2800₽ <span>3500₽</span></p>
-            <div class="check__btns">
-              <button class="check__registry-btn">Записаться</button>
-              <button class="check__more-btn">Подробнее</button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide check__wrapper">
+              <img class="check__img" src="./img/pictures/checkup.jpg" alt="">
+              <div class="check__content">
+                <h2 class="check__title title">Check-UP</h2>
+                <p class="check__for">для мужчин</p>
+                <ul class="check__list">
+                  <li class="check__item">Гормональный скрининг</li>
+                  <li class="check__item">Тестостерон</li>
+                  <li class="check__item">Свободный тестостерон</li>
+                  <li class="check__item">Глобулин, связывающий половые гормоны</li>
+                </ul>
+                <p class="check__price">Всего 2800₽ <span>3500₽</span></p>
+                <div class="check__content-btns">
+                  <button class="check__registry-btn">Записаться</button>
+                  <button class="check__more-btn">Подробнее</button>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide check__analisys-diag-wrapper">
+              <div class="check__analisys">
+               <a class="check__analisys-link" href="#">Анализы
+                <svg width="26" height="14" viewBox="0 0 26 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.01563 8.01563L22.5244 8.01562L18.9614 11.5614C18.5638 11.9571 18.5623 12.6001 18.958 12.9977C19.3537 13.3953 19.9968 13.3968 20.3944 13.0011L25.7012 7.71987C25.7016 7.71957 25.7018 7.71921 25.7021 7.71891C26.0987 7.32322 26.0999 6.67809 25.7022 6.28109C25.7019 6.28078 25.7016 6.28043 25.7013 6.28012L20.3945 0.998867C19.9969 0.603281 19.3538 0.604651 18.9581 1.00232C18.5624 1.39989 18.5639 2.04293 18.9615 2.43862L22.5244 5.98437L1.01563 5.98437C0.454704 5.98437 8.93721e-06 6.43907 8.98625e-06 7C9.03529e-06 7.56093 0.454704 8.01563 1.01563 8.01563Z" fill="white"/>
+                </svg>
+               </a>
+               <p class="check__analisys-descr">Все виды медицинских анализов быстро и без очереди</p>
+              </div>
+              <div class="check__diagnostics">
+                <a class="check__diagnostics-link" href="#">Диагностика
+                  <svg width="26" height="14" viewBox="0 0 26 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.01563 8.01563L22.5244 8.01562L18.9614 11.5614C18.5638 11.9571 18.5623 12.6001 18.958 12.9977C19.3537 13.3953 19.9968 13.3968 20.3944 13.0011L25.7012 7.71987C25.7016 7.71957 25.7018 7.71921 25.7021 7.71891C26.0987 7.32322 26.0999 6.67809 25.7022 6.28109C25.7019 6.28078 25.7016 6.28043 25.7013 6.28012L20.3945 0.998867C19.9969 0.603281 19.3538 0.604651 18.9581 1.00232C18.5624 1.39989 18.5639 2.04293 18.9615 2.43862L22.5244 5.98437L1.01563 5.98437C0.454704 5.98437 8.93721e-06 6.43907 8.98625e-06 7C9.03529e-06 7.56093 0.454704 8.01563 1.01563 8.01563Z" fill="white"/>
+                  </svg>
+                </a>
+                <p class="check__diagnostics-descr">Анализ функционального состояния сердца и бронхо-легочной системы</p>
+              </div>
+            </div>
             </div>
           </div>
         </div>
         <div class="check__btns">
-          <button class="check__prev-btn"></button>
-          <div><span>1</span>/<span>4</span></div>
-          <button class="check__next-btn"></button>
+          <button class="check__btn check__btn--prev ">
+            <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32.6718 7.67186H4.54493L9.20426 3.03512C9.72416 2.51768 9.72615 1.67678 9.20871 1.15689C8.69127 0.636925 7.8503 0.635 7.33041 1.15237L0.390691 8.05861C0.390226 8.05901 0.389894 8.05947 0.389496 8.05987C-0.129071 8.57731 -0.130731 9.42093 0.389363 9.94009C0.389828 9.94049 0.39016 9.94095 0.390558 9.94135L7.33028 16.8476C7.85011 17.3649 8.69107 17.3631 9.20858 16.8431C9.72602 16.3232 9.72402 15.4823 9.20413 14.9648L4.54493 10.3281H32.6718C33.4054 10.3281 34 9.7335 34 8.99998C34 8.26646 33.4054 7.67186 32.6718 7.67186Z" fill="#E1E1E1"/>
+            </svg>
+          </button>
+          <div class="check__pages swiper-pagination"><span>1</span>/<span>4</span></div>
+          <button class="check__btn check__btn--next ">
+            <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32.6718 7.67186H4.54493L9.20426 3.03512C9.72416 2.51768 9.72615 1.67678 9.20871 1.15689C8.69127 0.636925 7.8503 0.635 7.33041 1.15237L0.390691 8.05861C0.390226 8.05901 0.389894 8.05947 0.389496 8.05987C-0.129071 8.57731 -0.130731 9.42093 0.389363 9.94009C0.389828 9.94049 0.39016 9.94095 0.390558 9.94135L7.33028 16.8476C7.85011 17.3649 8.69107 17.3631 9.20858 16.8431C9.72602 16.3232 9.72402 15.4823 9.20413 14.9648L4.54493 10.3281H32.6718C33.4054 10.3281 34 9.7335 34 8.99998C34 8.26646 33.4054 7.67186 32.6718 7.67186Z" fill="#E1E1E1"/>
+            </svg>
+          </button>
         </div>
       </section>
     </main>
@@ -99,31 +151,67 @@
         </a>
         <ul class="footer__socials-list">
           <li class="footer__socials-item">
-            <a class="footer__socials-link footer__socials-link--instagram">
+            <a href="#" class="footer__socials-link footer__socials-link--instagram">
               <span class="visually-hidden">Инстаграмм</span>
             </a>
           </li>
           <li class="footer__socials-item">
-            <a class="footer__socials-link footer__socials-link--whatsup">
+            <a href="#" class="footer__socials-link footer__socials-link--whatsup">
               <span class="visually-hidden">What`s up</span>
             </a>
           </li>
           <li class="footer__socials-item">
-            <a class="footer__socials-link footer__socials-link--telegram">
+            <a href="#" class="footer__socials-link footer__socials-link--telegram">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
         </ul>
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item">О клинике</li>
-            <li class="footer__nav-item">Услуги</li>
-            <li class="footer__nav-item">Специалисты</li>
-            <li class="footer__nav-item">Цены</li>
-            <li class="footer__nav-item">Контакты</li>
+            <li class="footer__nav-item">
+              <a href="#">
+                О клинике
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">
+                Услуги
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">
+                Специалисты
+              </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">
+                Цены</li>
+            </a>
+            <li class="footer__nav-item">
+              <a href="#">
+                Контакты
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </footer>
+
+    <div class="modal" id="myModal">
+      <div class="modal__window">
+        <div class="modal__content">
+          <button class="modal__close-btn">X
+            <span class="visually-hidden">Закрыть модальное окно</span>
+          </button>
+          <form class="modal__form" action="files/mail.php" enctype="multipart/form-data" method="post" name="form" data-netlify="true">
+            <input type="hidden" name="admin_email[]" value="archunter13@yandex.ru">
+            <input class="modal__input" type="text" name="name" placeholder="ФИО" required>
+            <input class="modal__input" type="date" name="date" id="" placeholder="Дата записи">
+            <input class="modal__input" type="tel" name="tel" placeholder="Номер телефона" required>
+            <button class="modal__submit-btn" type="submit">Записаться</button>
+          </form>
+        </div>
+      </div>
+  </div>
   </body>
 </html>

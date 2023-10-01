@@ -23,6 +23,7 @@
 // }
 
 .footer__nav-list {
+  @include zero-list;
   @media (min-width: 1200px) {
     display: flex;
   }
@@ -30,7 +31,26 @@
 
 .footer__nav-item {
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    &:not(:last-child) {
+      margin: 0;
+      margin-right: 30px;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color ease-in-out 0.3s;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        color: $active_green;
+      }
+    }
   }
 }
 
@@ -45,6 +65,18 @@
 }
 
 .footer__socials-item {
+  text-decoration: none;
+  transition: opacity ease-in-out 0.3s;
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: 1200px) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 20px;
   }
@@ -67,16 +99,5 @@
 
   &--telegram {
     background-image: url(../img/img/telegram.svg);
-  }
-}
-
-.footer__nav-list {
-  @include zero-list;
-}
-
-.footer__nav-item {
-  color: $white;
-  &:not(:last-child) {
-    margin-bottom: 15px;
   }
 }

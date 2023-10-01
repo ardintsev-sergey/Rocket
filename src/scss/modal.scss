@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal--opened {
+  display: flex;
+}
+
+.modal__window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.modal__content {
+  position: relative;
+  padding: 30px;
+  padding-top: 70px;
+  background-color: $burger_green;
+  opacity: 0.9;
+}
+.modal__close-btn {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  @include zero-btn;
+  font-size: 40px;
+  color: #fff;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  width: 400px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.modal__submit-btn {
+  @include zero-btn;
+  display: block;
+  padding: 11px 29px;
+  background-color: $basic_btn-green;
+  border-radius: 50px;
+  line-height: 21px;
+  color: #fff;
+  transition: background-color ease-in-out 0.3s;
+
+  @media (min-width: 1200px) {
+    &:hover,
+    &:active {
+      background-color: $active_green;
+    }
+  }
+}
