@@ -13,14 +13,10 @@
 
   @media (min-width: 1200px) {
     grid-template-columns: 1fr max-content 1fr;
+    padding-top: 56px;
+    padding-bottom: 54px;
   }
 }
-
-// .footer__nav {
-//   @media (min-width: 1200px) {
-//     order: 2;
-//   }
-// }
 
 .footer__nav-list {
   @include zero-list;
@@ -35,6 +31,7 @@
   }
 
   @media (min-width: 1200px) {
+    font-size: 16px;
     &:not(:last-child) {
       margin: 0;
       margin-right: 30px;
@@ -67,18 +64,26 @@
 .footer__socials-item {
   text-decoration: none;
   transition: opacity ease-in-out 0.3s;
+  width: 24px;
+  height: 23px;
   &:active {
     opacity: 0.5;
   }
 
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
   @media (min-width: 1200px) {
+    width: 35px;
+    height: 35px;
     &:hover {
       opacity: 0.5;
     }
-  }
 
-  &:not(:last-child) {
-    margin-right: 20px;
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
   }
 }
 
@@ -86,8 +91,14 @@
   display: block;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   width: 24px;
   height: 23px;
+
+  @media (min-width: 1200px) {
+    width: 35px;
+    height: 35px;
+  }
 
   &--instagram {
     background-image: url(../img/img/instagram.svg);

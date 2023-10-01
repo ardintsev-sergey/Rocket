@@ -1,5 +1,9 @@
 .clinic {
   margin-bottom: 50px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 98px;
+  }
 }
 
 .clinic__wrapper {
@@ -7,8 +11,6 @@
 
   @media (min-width: 1200px) {
     display: flex;
-    // position: relative;
-    // height: 533px;
   }
 }
 
@@ -17,16 +19,12 @@
   display: block;
   width: 100%;
   object-fit: cover;
-  max-height: 350px;
+  max-height: 288px;
 
   @media (min-width: 1200px) {
     order: 2;
     width: 49.5%;
     max-height: 533px;
-    // position: absolute;
-    // right: 0;
-    // top: 0;
-    // bottom: 0;
   }
 }
 
@@ -40,20 +38,29 @@
   background-color: $basic_grey;
 
   @media (min-width: 1200px) {
-    padding-top: 144px;
     padding-bottom: 162px;
-    width: 370px;
+    padding-left: 14px;
+    width: 380px;
     margin-left: auto;
-    margin-right: 210px;
-    // padding-left: 390px;
+    margin-right: 216px;
   }
 }
 
 .clinic__title {
   margin-bottom: 10px;
+  width: 270px;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 
 .clinic__descr {
   @include zero-margin;
   line-height: 150%;
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/app.min.js" defer></script>
@@ -120,7 +120,6 @@
                 <p class="check__diagnostics-descr">Анализ функционального состояния сердца и бронхо-легочной системы</p>
               </div>
             </div>
-            </div>
           </div>
         </div>
         <div class="check__btns">
@@ -185,8 +184,9 @@
             </li>
             <li class="footer__nav-item">
               <a href="#">
-                Цены</li>
-            </a>
+                Цены
+              </a>
+            </li>
             <li class="footer__nav-item">
               <a href="#">
                 Контакты
@@ -203,10 +203,9 @@
           <button class="modal__close-btn">X
             <span class="visually-hidden">Закрыть модальное окно</span>
           </button>
-          <form class="modal__form" action="files/mail.php" enctype="multipart/form-data" method="post" name="form" data-netlify="true">
-            <input type="hidden" name="admin_email[]" value="archunter13@yandex.ru">
+          <form class="modal__form" action="./files/mail.php" enctype="multipart/form-data" method="post" name="form" data-netlify="true">
             <input class="modal__input" type="text" name="name" placeholder="ФИО" required>
-            <input class="modal__input" type="date" name="date" id="" placeholder="Дата записи">
+            <input class="modal__input" type="date" name="date">
             <input class="modal__input" type="tel" name="tel" placeholder="Номер телефона" required>
             <button class="modal__submit-btn" type="submit">Записаться</button>
           </form>

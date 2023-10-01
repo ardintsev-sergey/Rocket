@@ -23,7 +23,7 @@
     $theme = '[Заявка из формы]';
 
     $mail->addAddress('archunter13@yandex.ru')
-    // $mail->addAddress('archunter13@yandex.ru')
+    $mail->addAddress('rbru-metrika@yandex.ru')
 
     $mail->Subject = $theme;
     $mail->MsgHTML($body);

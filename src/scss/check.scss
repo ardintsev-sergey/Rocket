@@ -1,13 +1,18 @@
 .check {
-  margin-bottom: 50px;
+  margin-bottom: 39px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 104px;
+  }
 }
 
 .check__content {
   padding: 22px 30px 42px 23px;
   background-color: $basic_light-blue;
+  margin-bottom: 25px;
 
   @media (min-width: 1200px) {
-    padding: 53px 0px 56px 63px;
+    padding: 57px 0px 56px 63px;
     flex-grow: 1;
   }
 }
@@ -30,30 +35,51 @@
   @media (min-width: 1200px) {
     order: 2;
     width: 60.7%;
-    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 34% 100%);
+    clip-path: polygon(4% 0, 100% 0%, 100% 100%, 22% 100%);
   }
 }
 
 .check__title {
   margin-bottom: 5px;
   text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 3px;
+  }
 }
 
 .check__for {
   @include zero-margin;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-weight: 700;
+
+  @media (min-width: 1200px) {
+    font-size: 22px;
+    margin-bottom: 17px;
+  }
 }
 
 .check__list {
   @include zero-margin;
   padding-left: 16px;
-  margin-bottom: 17px;
+  margin-bottom: 22px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 37px;
+    font-size: 20px;
+  }
 }
 
 .check__item {
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
   }
 
   &::marker {
@@ -62,6 +88,7 @@
 }
 
 .check__price {
+  @include zero-margin;
   vertical-align: middle;
   font-size: 18px;
   margin-bottom: 27px;
@@ -81,7 +108,7 @@
 
 .check__registry-btn {
   @include zero-btn;
-  padding: 11px 29px;
+  padding: 11px 32px;
   margin-right: 6px;
   background-color: $basic_btn-green;
   border-radius: 50px;
@@ -93,6 +120,8 @@
     background-color: $active_green;
   }
   @media (min-width: 1200px) {
+    padding: 11px 62px;
+    margin-right: 14px;
     &:hover {
       background-color: $active_green;
     }
@@ -101,7 +130,7 @@
 
 .check__more-btn {
   @include zero-btn;
-  padding: 11px 29px;
+  padding: 11px 32px;
   border-radius: 50px;
   border: $basic_btn-green 1px solid;
   line-height: 21px;
@@ -113,6 +142,7 @@
     color: $white;
   }
   @media (min-width: 1200px) {
+    padding: 11px 62px;
     &:hover {
       background-color: $basic_btn-green;
       color: $white;
@@ -165,14 +195,22 @@
 
 .check__analisys-diag-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .check__analisys,
 .check__diagnostics {
   background-image: url(../img/pictures/checkup2-desktop.jpg);
-  width: 49%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   min-height: 294px;
   display: flex;
   justify-content: end;
@@ -184,9 +222,6 @@
 
 .check__diagnostics {
   background-image: url(../img/pictures/checkup3-desktop.jpg);
-  // width: 49%;
-  // min-height: 294px;
-  // border-radius: 5px;
 }
 
 .check__analisys-link,
@@ -212,18 +247,19 @@
   }
 }
 
-// .check__analisys-link::after,
-// .check__diagnostics-link::after {
-//   position: absolute;
-//   content: url(../img/img/arrow-check.svg);
-
-// }
-
 .check__analisys-descr,
 .check__diagnostics-descr {
   @include zero-margin;
-  width: 400px;
   color: $white;
   font-size: 16px;
   line-height: 24px;
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
+}
+
+.swiper-slide {
+  @media (min-width: 1200px) {
+    max-height: 440px;
+  }
 }
