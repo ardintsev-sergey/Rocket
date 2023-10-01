@@ -19,12 +19,17 @@
   display: block;
   width: 100%;
   object-fit: cover;
-  max-height: 288px;
+  min-height: 288px;
 
   @media (min-width: 1200px) {
     order: 2;
     width: 49.5%;
-    max-height: 533px;
+    min-height: 533px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
   }
 }
 

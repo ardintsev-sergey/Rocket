@@ -73,7 +73,10 @@
     <main>
       <section class="clinic">
         <div class="clinic__wrapper ">
-          <img class="clinic__img" src="./img/pictures/clinic.jpg" alt="">
+          <picture class="clinic__img">
+            <source media="(min-width: 1200px)" srcset="./img/pictures/clinic-desktop.webp">
+            <img src="./img/pictures/clinic.webp" alt="Многопрофильная клиника">
+          </picture>
           <div class="clinic__content">
             <h1 class="main__title clinic__title title">Многопрофильная клиника для детей и взрослых</h1>
             <p class="clinic__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
@@ -85,7 +88,10 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide check__wrapper">
-              <img class="check__img" src="./img/pictures/checkup.jpg" alt="">
+              <picture class="check__img">
+                <source media="(min-width: 1200px)" srcset="./img/pictures/checkup-desktop.webp">
+                <img src="./img/pictures/checkup.webp" alt="Checkup">
+              </picture>
               <div class="check__content">
                 <h2 class="check__title title">Check-UP</h2>
                 <p class="check__for">для мужчин</p>
